@@ -1,0 +1,3 @@
+export let countryList = ["indonesia", "malaysia", "singapura", "jepang", "korea", "america", "england"]
+export let objectNameList = ["Monas", "Upin Inpin", "Singa Besar", "Bunga Sakura", "Parasite movie from", "Donald Trump", "Elizabeth Queen"]
+export let objectImageList = ["https://wallpaperaccess.com/full/21966.jpg", "https://wallpaperaccess.com/thumb/1191964.jpg", "https://wallpaperaccess.com/thumb/1606772.jpg", "https://wallpaperaccess.com/thumb/6512.jpg", "https://wallpaperaccess.com/thumb/17671.jpg", "https://wallpaperaccess.com/thumb/655857.jpg", "https://wallpaperaccess.com/thumb/470732.jpg"]
