@@ -25,7 +25,7 @@ const LoginScreen = (props) => {
         setPassword('')
     }
     const globalProfileData = useSelector(store => store.profileReducer)
-    useEffect(() => {
+    useEffect(() => {  
         console.log('Global State on Login page')
         console.log(globalProfileData)
     }, [globalProfileData])

@@ -1,6 +1,7 @@
 
 import React from 'react';
 import {View, Text, Button} from 'react-native';
+
 const FirstScreen = () => {
     const openAlert = () => {
         alert("Hello :) ")
@@ -15,7 +16,7 @@ const FirstScreen = () => {
             <Text style={{
                 margin: 16
             }}>Hello <Text style={{
-                    color: 'red'
+                    color: 'red'        
                 }}> World !</Text>
             </Text>
             <Button title="This is button" onPress={openAlert} />

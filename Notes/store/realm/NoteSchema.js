@@ -6,3 +6,13 @@ export const NoteSchema = {
         date : 'string'
     }, primaryKey : 'id'
 }
+
+export const User = {
+    name : 'User',
+    properties : {
+        id : 'int',
+        name : 'string',
+        email : 'string',
+        password : 'string'
+    }, primaryKey : 'id'
+}

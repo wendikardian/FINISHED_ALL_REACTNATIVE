@@ -9,9 +9,12 @@ const RegisterScreen = (props) => {
     const {navigation} = props
     const dispatch = useDispatch()
     const globalProfileData = useSelector(store => store.profileReducer)
-    useEffect(() => {
-        console.log(globalProfileData)
-    }, [globalProfileData])
+    // const dataStore = useSelector((store) => {
+    //     store.profileReducer
+    // })
+    // useEffect(() => {
+    //     console.log(dataStore)
+    // }, [dataStore])
 
     const [form, setForm] = useState({
         username : '',
@@ -21,8 +24,15 @@ const RegisterScreen = (props) => {
 
     const [isEmailFormat, setIsEmailFormat] = useState(true)
     const [isPassVisible, setIsPassVisible] = useState(false);
+
+
+    useEffect(() => {
+            console.log(globalProfileData)
+        }, [globalProfileData])
+
     const onChangeInput = (inputType, value) => {
-        const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
+        const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
+        const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
         if(inputType === 'email'){
             if(!emailRegex.test(value)){
                 setIsEmailFormat(false)
@@ -30,6 +40,9 @@ const RegisterScreen = (props) => {
                 setIsEmailFormat(true)
             }
         }
+
+        // console.log(...form)
+
         setForm({
             ...form,
             [inputType] : value
@@ -39,7 +52,7 @@ const RegisterScreen = (props) => {
     const sendData = () => {
         if(form.username === '' || form.email === '' || form.password === '' || !isEmailFormat) {
             alert('Make sure you fill all the field with the right information !')
-        }else {
+        } else {
             dispatch(createProfile(form))
             Alert.alert(
                 'Success',
@@ -87,7 +100,7 @@ const RegisterScreen = (props) => {
                     <Input title="Email" placeholder="Email" onChangeText={(text) => onChangeInput('email', text)} />
                     {
                         isEmailFormat ? null : <View style={styles.warningContainer}>
-                            <Text style={styles.warning}> 
+                            <Text style={styles.warning}>
                                 Please input the right email format !
                             </Text>
                         </View>

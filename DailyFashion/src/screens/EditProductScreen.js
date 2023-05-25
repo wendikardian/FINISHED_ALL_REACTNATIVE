@@ -22,6 +22,7 @@ const EditProductScreen = (props) => {
         facebook: '',
         phoneNumber : ''
     })
+    
     useEffect(() => {
         const data = realm.objects('Product').filtered(`id = ${idProduct}`)[0]
         setProductData({
@@ -30,8 +31,8 @@ const EditProductScreen = (props) => {
             category : data.category,
             description : data.description,
             price : String(data.price),
-            instagram : data.instagram, 
-            facebook : data.facebook, 
+            instagram : data.instagram,
+            facebook : data.facebook,
             phoneNumber : data.phoneNumber
         })
     }, [idProduct])
@@ -71,7 +72,7 @@ const EditProductScreen = (props) => {
                     text : "OK", onPress : () =>navigation.goBack()
                 }])
             }else{
-                
+
                 realm.write(() => {
                     updatedData.productName = productData.productName;
                     updatedData.imagePath = productData.imagePath;
@@ -87,7 +88,7 @@ const EditProductScreen = (props) => {
                     text : "OK", onPress : () =>navigation.goBack()
                 }])
             }
-            
+
         }
     }
     return (
@@ -99,15 +100,15 @@ const EditProductScreen = (props) => {
                             width: productData.imagePath !== '' ? wp('50%') : 50,
                              height: productData.imagePath !== '' ? wp('50%') : 50
                         }} source={{
-                            uri : productData.imagePath !== '' ? productData.imagePath : 
+                            uri : productData.imagePath !== '' ? productData.imagePath :
                             'https://assets.webiconspng.com/uploads/2017/02/Photograph-Icon-PNG.png'
                         }} />
                     </TouchableOpacity>
-    
+
                 </View>
                 <View style={styles.horizontalContainer}>
                     <InputComponent placeholder="Product Name" value={productData.productName} onChangeText={(text) => onInputChange('productName', text)} />
-                    <SelectDropdown data={categoryList} defaultButtonText="Select Category" 
+                    <SelectDropdown data={categoryList} defaultButtonText="Select Category"
                     onSelect={(item) => onInputChange('category', item.id)}
                     buttonTextAfterSelection={(item) => {
                         return item.name

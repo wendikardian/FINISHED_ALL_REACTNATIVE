@@ -23,7 +23,8 @@ const styles = StyleSheet.create({
         margin: 16,
         flex : 1,
         flexDirection: 'row',
-        backgroundColor: 'mistyrose'
+        backgroundColor: 'mistyrose',
+        position: 'relative'
     }, blueBox : {
         backgroundColor: 'blue',
         width: '25%',
@@ -34,10 +35,17 @@ const styles = StyleSheet.create({
         width: '25%',
         height: '25%',
         borderWidth: 1,
-        bottom: 0,
-        right: 0,
-        zIndex:1,
-        position: 'absolute'
+        zIndex: 3,
+        position: 'absolute',
+        bottom: 20,
+        right: 20
+
+
+// marginLeft: 100
+        // zIndex:1,
+        // top: 50,
+        // left: 50,
+        // position: 'absolute'
     }
 })
 

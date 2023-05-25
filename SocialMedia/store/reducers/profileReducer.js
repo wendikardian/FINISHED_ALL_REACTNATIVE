@@ -5,6 +5,7 @@ const initialState = {
     isLogin : false
 }
 
+
 export const profileReducer = (state = initialState, action) => {
     if(action.type === 'CREATE_PROFILE') {
         const data = action.payload;

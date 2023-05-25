@@ -14,37 +14,37 @@ const Stack = createStackNavigator()
 const Tab = createBottomTabNavigator()
 
 const StartScreen = () => {
-  
   return(
     <Tab.Navigator initialRouteName="Home" >
       <Tab.Screen name="Home" component={HomeScreen} options={{
         tabBarLabel : ({focused}) => (
-          <Text style={{color: focused ? 'green' : 'grey', fontSize : 12}}>
+          <Text style={{color: focused ? 'purple' : 'grey', fontSize : 12}}>
             Home
           </Text>
         ), tabBarIcon : ({focused}) => (
           <Icon name="home" type="material-community" color={focused ? 'purple' : 'grey'} size={24} />
         ), tabBarLabelPosition : 'below-icon',
-        headerTitleAlign: 'center', 
+        headerTitleAlign: 'center',
         headerStyle : {
           backgroundColor: 'lavender'
         }
-      }} 
+      }}
       />
       <Tab.Screen name="Profile" component={ProfileScreen} options={{
         tabBarLabel : ({focused}) => (
-          <Text style={{color: focused ? 'green' : 'grey', fontSize : 12}}>
+          <Text style={{color: focused ? 'purple' : 'grey', fontSize : 12}}>
             Profile
           </Text>
         ), tabBarIcon : ({focused}) => (
           <Icon name="account" type="material-community" color={focused ? 'purple' : 'grey'} size={24} />
         ), tabBarLabelPosition : 'below-icon',
-        headerTitleAlign: 'center', 
+        headerTitleAlign: 'center',
         headerStyle : {
           backgroundColor: 'lavender'
         }
-      }} 
+      }}
       />
+
     </Tab.Navigator>
   )
 }
@@ -54,11 +54,10 @@ const MainNavigator = () => {
   return (
     <NavigationContainer>
       {
-        isLogin ? 
+        isLogin ?
         <Stack.Navigator initialRouteName="Start">
           <Stack.Screen name="Start" component={StartScreen} options={{headerShown: false}} />
         </Stack.Navigator>
-        
         :
         // <Stack.Navigator initialRouteName="Home">
         //   <Stack.Screen name="Home" component={HomeScreen} />
@@ -68,7 +67,7 @@ const MainNavigator = () => {
           <Stack.Screen name="Register" component={RegisterScreen} options={{headerTitleAlign: 'center', headerLeft : null}} />
         </Stack.Navigator>
       }
-        
+
     </NavigationContainer>
   )
 }

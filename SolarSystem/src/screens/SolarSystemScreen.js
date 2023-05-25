@@ -10,7 +10,7 @@ const SolarSystemScreen = () => {
             </View>
             <View  style={{marginBottom : 80}}>
                 <ScrollView >
-                    <Card title='mercury' description='Mercury is the fastest planet, zipping around the sun every 88 earth days' image={require('../../assets/images/mercury.png')} />
+                    <Card tit le='mercury' description='Mercury is the fastest planet, zipping around the sun every 88 earth days' image={require('../../assets/images/mercury.png')} />
                     <Card title='Venus' description='Venus spins slowly in the opposite direction from most planets' image={require('../../assets/images/venus.png')} />
                     <Card title='Earth' description='Earth is the only place we know of so far thats inhabited by living things' image={require('../../assets/images/earth.png')} />
                     <Card title='Mars' description='Mars is a dusty, cold, desert world with a very thin atmosphere' image={require('../../assets/images/mars.png')} />

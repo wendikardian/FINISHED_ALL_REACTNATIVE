@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
         flex : 1
     }, headerContainer : {
         padding: 8,
-        backgroundColor : 'moccasin',
+        backgroundColor : 'moccasin', 
         alignItems : 'center',
         flexDirection : 'row',
         justifyContent : 'space-between'

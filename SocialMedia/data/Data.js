@@ -4,7 +4,7 @@ export const data = [
         imageLink: 'https://wallpaperaccess.com/full/3926232.jpg',
         username:'bryan',
         caption:'Some people feel the rain, others just get wet',
-        profilePicture:'https://images.pexels.com/photos/594610/pexels-photo-594610.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+        profilePicture:'https://images.pexels.com/photos/594610/pexels-photo-594610.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
     },
     {
         id:2,

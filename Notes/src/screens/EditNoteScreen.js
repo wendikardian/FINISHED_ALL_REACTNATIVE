@@ -25,7 +25,7 @@ const EditNoteScreen = (props) => {
         const yearOnly = noteDate.getFullYear()
         return months[monthOnly] + ` ` + dateOnly + ', ' + yearOnly
       }
-      
+
     const editNote = (value, editStatus) => {
         setNewNote(value)
         setIsEdit(editStatus)
@@ -58,7 +58,7 @@ const EditNoteScreen = (props) => {
         )}
         />
         {
-            dataToUpdate.length !== 0 ? 
+            dataToUpdate.length !== 0 ?
             <MainComponent date={dateFormat(dataToUpdate[0].date)}
             value={isEdit ? newNote : dataToUpdate[0].note}
             onChangeText={(text) => editNote(text, true)} />  :
@@ -71,7 +71,7 @@ const EditNoteScreen = (props) => {
 const styles = StyleSheet.create({
     mainContainer : {
         flex : 1,
-    }, 
+    },
 })
 
 export default EditNoteScreen

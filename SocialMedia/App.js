@@ -7,10 +7,9 @@ import {Provider} from 'react-redux'
 import {profileReducer} from './store/reducers/profileReducer'
 
 const rootReducer = combineReducers({
-  profileReducer : profileReducer
+  profileReducer : profileReducer,
 })
 const store = createStore(rootReducer)
-
 
 const App = () => {
   return(
@@ -19,7 +18,7 @@ const App = () => {
           <MainNavigator />
         </SafeAreaProvider>
     </Provider>
-    
+
   )
 }
 

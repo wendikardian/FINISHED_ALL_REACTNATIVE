@@ -1,3 +1,68 @@
-export let countryList = ["indonesia", "malaysia", "singapura", "jepang", "korea", "america", "england"]
-export let objectNameList = ["Monas", "Upin Inpin", "Singa Besar", "Bunga Sakura", "Parasite movie from", "Donald Trump", "Elizabeth Queen"]
-export let objectImageList = ["https://wallpaperaccess.com/full/21966.jpg", "https://wallpaperaccess.com/thumb/1191964.jpg", "https://wallpaperaccess.com/thumb/1606772.jpg", "https://wallpaperaccess.com/thumb/6512.jpg", "https://wallpaperaccess.com/thumb/17671.jpg", "https://wallpaperaccess.com/thumb/655857.jpg", "https://wallpaperaccess.com/thumb/470732.jpg"]
+export const countryList = [
+    'england',
+    'france',
+    'brazil',
+    'india',
+    'egypt',
+    'japan',
+    'indonesia',
+    'malaysia',
+    'philippines',
+    'united states',
+    'netherlands',
+    'singapore',
+    'italy',
+    'south korea',
+    'greece',
+    'china',
+    'peru',
+    'unites arab emirates',
+    'vietnam',
+    'cambodia'
+]
+
+export const objectNameList = [
+    'Big Ben',
+    'Eiffel Tower',
+    'Rio de Janeiro',
+    'Taj Mahal',
+    'Sphinx',
+    'Fuji Mountain',
+    'Borobudur Temple',
+    'Petronas Twin Tower',
+    'Chocolate Hills',
+    'Statue of Liberty',
+    'Keukenhof Tulip Gardens',
+    'Merlion Park',
+    'Leaning Tower of Pisa',
+    'Jeju Island',
+    'Santorini',
+    'The Great Wall',
+    'Machu Picchu',
+    'Burj Khalifa',
+    'Halong Bay',
+    'Angkor Wat'
+]
+
+export const objectImageList = [
+    'https://wallpaperaccess.com/full/180136.jpg',
+    'https://wallpaperaccess.com/full/850285.jpg',
+    'https://wallpapercave.com/wp/MhSGnhn.jpg',
+    'https://wallpaperaccess.com/full/1894584.jpg',
+    'https://wallpaperaccess.com/full/3546704.jpg',
+    'https://wallpaperaccess.com/full/120542.jpg',
+    'http://www.boldtravel.com/wp-content/uploads/2015/10/Borobudur-Sunrise-Tour-13_.jpg',
+    'https://wallpapercave.com/wp/EW7Hjzp.jpg',
+    'https://wallpaperaccess.com/full/2376577.jpg',
+    'https://wallpapercave.com/wp/rdbGBa5.jpg',
+    'https://c4.wallpaperflare.com/wallpaper/14/445/201/field-mill-tulips-netherlands-wallpaper-preview.jpg',
+    'https://wallpaperaccess.com/full/1606772.jpg',
+    'https://wallpaperaccess.com/full/3126088.jpg',
+    'https://cdn.kibrispdr.org/data/jeju-island-wallpaper-35.jpg',
+    'https://wallpaperaccess.com/full/496881.jpg',
+    'https://wallpaperaccess.com/full/524676.jpg',
+    'https://wallpaperaccess.com/full/652483.jpg',
+    'https://wallpaperaccess.com/full/1136554.jpg',
+    'https://wallpaperaccess.com/full/200970.jpg',
+    'https://wallpaperaccess.com/full/1913480.jpg'
+]

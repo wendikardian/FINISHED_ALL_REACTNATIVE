@@ -78,6 +78,7 @@ const NoteListScreen = (props) => {
       alert("Nothing to remove")
     }
   }
+  
   return (
     <View style={styles.mainContainer}>
       <View style={styles.headerContainer}>

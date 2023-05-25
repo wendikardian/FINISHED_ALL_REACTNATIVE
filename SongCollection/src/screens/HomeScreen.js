@@ -36,7 +36,7 @@ const HomeScreen = (props) => {
                                 
                                 <Text style={styles.title}>{item.title}</Text>
                             </View>
-                            <View style={[styles.yearContainer], {flexDirection : 'row'}}>
+                            <View style={[styles.yearContainer, {flexDirection : 'row'}]}>
                             <Text >{item.singer}</Text>
                             </View>
                             <View style={{flexDirection: 'row', marginTop: 5}}>

@@ -15,6 +15,7 @@ const GuessTheCountryScreen = (props) => {
         const pickRandomIndex = Math.floor(Math.random() * countryList.length)
         setIndex(pickRandomIndex)
     }
+
     const checkAnswer = () => {
         if (answer === countryList[index]) {
             setResult('true')
@@ -30,6 +31,8 @@ const GuessTheCountryScreen = (props) => {
             randomIndex()
         }, 1500)
     }
+
+    
     useEffect( () => {
         if(score == 50){
             navigation.navigate('Win')
@@ -41,6 +44,15 @@ const GuessTheCountryScreen = (props) => {
             navigation.navigate('GameOver')
         }
     }, [life])
+
+    // useEffect(() => {
+    //     if(score == 50) {
+    //         navigation.navigate('Win')
+    //     }else if (life < 1){
+    //         navigation.navigate('GameOver')
+    //     }
+    // }, [score, life])
+
     useEffect(() => {
         const homePage = navigation.addListener('focus', () => {
             randomIndex()
@@ -49,6 +61,8 @@ const GuessTheCountryScreen = (props) => {
         })
         return homePage
     }, [])
+
+    
     return(
         <ScrollView contentContainerStyle={{flexGrow: 1}}>
             <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>

@@ -4,14 +4,17 @@ import {useEffect} from 'react'
 import {MovieExplanation} from '../components/MovieComponent'
 
 const DetailMovieScreen = (props) => {
+    // const {navigation} = props
     const {route} = props;
     const movie = route.params.item;
     const numberWithCommas = (number) => {
         return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
     }
+
     useEffect(() => {
         console.log(movie)
-    },[])
+    }, [])
+    
     return (
         <View style={styles.mainContainer}>
             <ScrollView>

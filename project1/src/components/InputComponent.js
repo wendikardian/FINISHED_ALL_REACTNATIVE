@@ -2,7 +2,7 @@ import React from 'react'
 import {View, Text, TextInput} from 'react-native'
 
 export const InputComponent = (props) => {
-    const {title, height} = props
+    const {title, height,} = props
     return(
         <View>
             <Text style={{marginTop: 12, marginBottom: 12}}>
@@ -12,3 +12,4 @@ export const InputComponent = (props) => {
         </View>
     )
 }
+

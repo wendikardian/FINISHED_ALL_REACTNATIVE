@@ -1,59 +1,74 @@
-import React, { useState, useEffect } from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import React,  { useState, useEffect } from 'react';
+import {View, Text, TouchableOpacity} from 'react-native';
 
 const HomeScreen = () => {
-    const [number, setNumber] = useState(0);
+  const [age, setAge] = useState(13);
+  const [number, setNumber] = useState(0);
+  const [phone, setPhone] = useState(123);
+  const [name, setName] = useState("Wendi")
+  // const [data, setData] = useState({
+  //   name : '',
+  //   class : '',
+  // })
 
-    const decreaseNumber = () => {
-        setNumber(number - 1);
-    };
+  const decreaseNumber = () => {
+    setNumber(number - 1);
+    setName("Dikurangi")
+  };
+  
+  const increaseNumber = () => {
+    setNumber(number + 1);
+    setName("Ditambah")
+  };
 
-    const increaseNumber = () => {
-        setNumber(number + 1);
-    };
+  // useEffect(() => {
+  //   setNumber(100)
+  //   setName("Kelvin")
+  // }, [])
 
-    useEffect( () => {
-        setNumber(10);
-        alert("You can increase the number")
-    }, [])
+  useEffect(() => {
+    setNumber(200)
+    setName("Louis")
+  }, [])
 
-    return (
-        <View style={{
-            flex: 1,
-            justifyContent: 'center',
-            alignItems: 'center',
-            flexDirection: 'row'
+  return (
+    <View
+      style={{
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'row',
+      }}>
+      <View
+        style={{
+          margin: 8,
+          padding: 8,
+          borderWidth: 1,
         }}>
-            <View style={{
-                margin: 8,
-                padding: 8,
-                borderWidth: 1
-            }}>
-                <TouchableOpacity
-                    onPress={() => decreaseNumber()}
-                >
-                    <Text style={{ fontSize: 50 }}> - </Text>
-                </TouchableOpacity>
-            </View>
-            <View style={{
-                margin: 8,
-                padding: 8
-            }}>
-                <Text style={{ fontSize: 50 }}>{number}</Text>
-            </View>
-            <View style={{
-                margin: 8,
-                padding: 8,
-                borderWidth: 1
-            }}>
-                <TouchableOpacity
-                    onPress={() => increaseNumber()}
-                >
-                    <Text style={{ fontSize: 50 }}> + </Text>
-                </TouchableOpacity>
-            </View>
-        </View>
-    )
+        <TouchableOpacity onPress={() => decreaseNumber()}>
+          <Text style={{fontSize: 50}}> - </Text>
+        </TouchableOpacity>
+      </View>
+      <View
+        style={{
+          margin: 8,
+          padding: 8,
+        }}>
+        <Text style={{fontSize: 50}}>{number}</Text>
+        <Text>{name}</Text>
+      </View>
+      <View
+        style={{
+          margin: 8,
+          padding: 8,
+          borderWidth: 1,
+        }}>
+        <TouchableOpacity onPress={() => increaseNumber()}>
+          <Text style={{fontSize: 50}}> + </Text>
+        </TouchableOpacity>
+      </View>
+    </View>
+  );
 };
 
 export default HomeScreen;
